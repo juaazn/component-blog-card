@@ -1,0 +1,22 @@
+---
+const { nameItem } = Astro.props
+---
+<div class='card__container'>
+  <strong class='card__panelDesing'>{nameItem}</strong>
+</div>
+
+<style>
+  .card__container { 
+    width: 4.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.1rem;
+    background-color: var(--color-purpleh);
+  }
+  .card__panelDesing {
+    font-size: .7rem;
+    color: var(--color-purple);
+  }
+</style>
