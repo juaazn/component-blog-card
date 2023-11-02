@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets'
+import cactus from '../../src/cactus_img.jpg'
+import Quote from './Quote.astro'
+import PaneItem from './PaneItem.astro';
+---
+
+<article class='card'>
+  <Image src={cactus} alt='Imágen de un cactus' class='card__imgCactus'/>
+  <section class='card__content'>
+    <PaneItem nameItem='Desing'/>
+    <h1>Embracing Minimalism</h1>
+    <p>From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty that lies in simplicity.</p>
+  </section>
+  <hr>
+  <Quote />
+</article>
+
+<style>
+  .card {
+    width: 25rem;
+    height: auto;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .card__imgCactus{
+    width: 90%;
+    height: 9.5rem;
+    margin: 1rem 0;
+    object-fit: fill;
+    border-radius: 1rem;
+    margin: 1rem 1rem;
+  }
+  .card__content h1 {
+    margin: .99999rem 0 0.375rem 0;
+  }
+  .card__content{
+    width: 90%;
+    height: auto;
+  }
+  .card__content p {
+    color: var(--color-grey1);
+    margin: 0 0 1.25rem 0;
+  }
+  hr {
+    width: 100%;
+    background-color: var(--color-grey1);
+  }
+</style>
